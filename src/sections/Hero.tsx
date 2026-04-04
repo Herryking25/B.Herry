@@ -101,7 +101,7 @@ export default function Hero() {
                 }`}
             >
               My name is <span className="font-semibold text-foreground">Bolatito Heritage</span>,
-              an experienced web developer passionate about building modern and responsive web experiences.
+              an experienced Front-end developer passionate about building modern and responsive web experiences.
             </p>
 
             {/* CTA Buttons */}
@@ -139,9 +139,9 @@ export default function Hero() {
               <span className="text-sm text-muted-foreground">Follow me:</span>
               <div className="flex items-center gap-2">
                 {[
-                  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-                  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-                  { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+                  { icon: Github, href: 'https://github.com/Herryking25', label: 'GitHub' },
+                  { icon: Linkedin, href: 'https://linkedin.com/in/Heritage-Bolatito', label: 'LinkedIn' },
+                  { icon: Twitter, href: 'https://x.com/_Herryking', label: 'Twitter' },
                 ].map((social) => (
                   <a
                     key={social.label}

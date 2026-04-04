@@ -21,7 +21,6 @@ const projects: Project[] = [
     image: '/project-1.png',
     techStack: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'Socket.io'],
     liveUrl: 'https://fantasyballerleague.netlify.app/',
-    githubUrl: 'https://github.com',
     featured: true,
   },
   {
@@ -31,7 +30,6 @@ const projects: Project[] = [
     image: '/project-2.png',
     techStack: ['Next.js', 'Tailwind CSS', 'Prisma', 'PostgreSQL'],
     liveUrl: 'https://king-shop-murex.vercel.app/',
-    githubUrl: 'https://github.com',
   },
   {
     id: 3,
@@ -48,7 +46,7 @@ const projects: Project[] = [
     image: '/project-4.png',
     techStack: ['React.js', 'Tailwind CSS', 'EmailJS'],
     liveUrl: 'https://vineyard-catering-service.vercel.app/',
-    githubUrl: 'https://github.com',
+
   },
 ];
 
@@ -126,7 +124,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               <ExternalLink className="w-4 h-4 mr-2" />
               Live Demo
             </Button>
-            {project.githubUrl && (
+            {/* {project.githubUrl && (
               <Button
                 size="sm"
                 variant="outline"
@@ -136,7 +134,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 <Github className="w-4 h-4 mr-2" />
                 Code
               </Button>
-            )}
+            )} */}
           </div>
         </div>
 
@@ -199,7 +197,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={sectionRef}
-      className="relative py-24 sm:py-32 section-padding overflow-hidden"
+      className="relative py-26 sm:py-32 section-padding overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -242,7 +240,7 @@ export default function Projects() {
             variant="outline"
             size="lg"
             className="rounded-full px-8 py-6 text-base font-medium border-2 hover:bg-foreground/5 dark:hover:bg-white/5 transition-all duration-300"
-            onClick={() => window.open('https://github.com', '_blank')}
+            onClick={() => window.open('https://github.com/Herryking25', '_blank')}
           >
             <Github className="w-4 h-4 mr-2" />
             View More on GitHub
