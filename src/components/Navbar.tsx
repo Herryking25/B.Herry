@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from '@/hooks/useTheme';
 import { Button } from '@/components/ui/button';
-import { 
-  Menu, 
-  X, 
+import {
+  Menu,
+  X,
   Sun, 
   Moon, 
   Download,
@@ -131,18 +131,14 @@ export default function Navbar() {
 
           {/* Download CV Button - Desktop */}
           <Button
+            asChild
             size="sm"
             className="hidden sm:flex items-center gap-2 bg-foreground text-background hover:bg-foreground/90 rounded-full px-4 py-2 text-xs font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
-            onClick={() => {
-              // Create a dummy CV download
-              const link = document.createElement('a');
-              link.href = 'data:text/plain;charset=utf-8,Bolatito Heritage - Front-End Developer\n\nContact: bolatitoheritage25@gmail.com\nPhone: +2349132747510';
-              link.download = 'B.Herry_CV.txt';
-              link.click();
-            }}
           >
-            <Download className="w-3.5 h-3.5" />
-            <span>CV</span>
+            <a href="/Heritage_CV.pdf" download="Heritage_CV.pdf">
+              <Download className="w-3.5 h-3.5" />
+              <span>CV</span>
+            </a>
           </Button>
 
           {/* Mobile Menu Button */}
@@ -191,16 +187,17 @@ export default function Navbar() {
               <div className="border-t border-border my-2" />
               
               <Button
+                asChild
                 className="w-full flex items-center justify-center gap-2 bg-foreground text-background hover:bg-foreground/90 rounded-2xl py-3 text-sm font-medium"
-                onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = 'data:text/plain;charset=utf-8,Bolatito Heritage - Front-End Developer\n\nContact: bolatitoheritage25@gmail.com\nPhone: +2349132747510';
-                  link.download = 'B.Herry_CV.txt';
-                  link.click();
-                }}
               >
-                <Download className="w-4 h-4" />
-                <span>Download CV</span>
+                <a
+                  href="/Heritage_CV.pdf"
+                  download="Heritage_CV.pdf"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <Download className="w-4 h-4" />
+                  <span>Download CV</span>
+                </a>
               </Button>
             </div>
           </div>
