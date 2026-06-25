@@ -48,6 +48,24 @@ const projects: Project[] = [
     liveUrl: 'https://vineyard-catering-service.vercel.app/',
 
   },
+  {
+    id: 5,
+    name: 'DrugCheckerAI',
+    description: 'DrugChecker AI is a cutting-edge platform designed to assist patients and healthcare providers in identifying potential adverse interactions between medications. Leveraging advanced AI and deep research, DrugChecker AI scans multiple drug databases to flag dangerous combinations and provide comprehensive risk assessments.',
+    image: '/project-5.png',
+    techStack: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Tanstack Query', 'GeminiAI',],
+    liveUrl: 'https://drugcheckerai-zeta.vercel.app/',
+
+  },
+  {
+    id: 6,
+    name: 'Imole-Softskills for kids',
+    description: 'Imole-Softskills for kids is a cutting-edge platform designed to assist kids in developing their soft skills. Leveraging advanced AI and deep research, Imole help kids to gain knowlegde in critical thinking, problem solving, communication and emotional intelligence.',
+    image: '/project-6.png',
+    techStack: ['React.js', 'Tailwind CSS', 'TypeScript'],
+    liveUrl: 'https://imole-virid.vercel.app/',
+
+  },
 ];
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
@@ -75,46 +93,41 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <div
       ref={cardRef}
-      className={`group relative transition-all duration-700 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-      }`}
+      className={`group relative transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+        }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div
-        className={`relative overflow-hidden rounded-3xl bg-card border border-border transition-all duration-500 ${
-          isHovered ? 'shadow-2xl scale-[1.02]' : 'shadow-lg'
-        }`}
+        className={`relative overflow-hidden rounded-3xl bg-card border border-border transition-all duration-500 ${isHovered ? 'shadow-2xl scale-[1.02]' : 'shadow-lg'
+          }`}
       >
         {/* Image Container */}
         <div className="relative aspect-video overflow-hidden">
           <img
             src={project.image}
             alt={project.name}
-            className={`w-full h-full object-cover transition-all duration-700 ${
-              isHovered ? 'scale-110' : 'scale-100'
-            }`}
+            className={`w-full h-full object-cover transition-all duration-700 ${isHovered ? 'scale-110' : 'scale-100'
+              }`}
           />
-          
+
           {/* Overlay */}
           <div
-            className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500 ${
-              isHovered ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'
+              }`}
           />
-          
+
           {/* Featured Badge */}
           {project.featured && (
             <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-red-500 text-white text-xs font-medium">
               Featured
             </div>
           )}
-          
+
           {/* Hover Actions */}
           <div
-            className={`absolute inset-0 flex items-center justify-center gap-4 transition-all duration-500 ${
-              isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-            }`}
+            className={`absolute inset-0 flex items-center justify-center gap-4 transition-all duration-500 ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}
           >
             <Button
               size="sm"
@@ -145,16 +158,15 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               {project.name}
             </h3>
             <ArrowUpRight
-              className={`w-5 h-5 transition-all duration-300 ${
-                isHovered ? 'opacity-100 translate-x-0 -translate-y-0' : 'opacity-0 -translate-x-2 translate-y-2'
-              }`}
+              className={`w-5 h-5 transition-all duration-300 ${isHovered ? 'opacity-100 translate-x-0 -translate-y-0' : 'opacity-0 -translate-x-2 translate-y-2'
+                }`}
             />
           </div>
-          
+
           <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
             {project.description}
           </p>
-          
+
           {/* Tech Stack */}
           <div className="flex flex-wrap gap-2">
             {project.techStack.map((tech) => (
@@ -208,9 +220,8 @@ export default function Projects() {
       <div className="container-wide relative z-10">
         {/* Section Header */}
         <div
-          className={`text-center mb-16 transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+          className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-foreground/5 dark:bg-white/10 text-sm font-medium mb-4">
             Portfolio
@@ -232,9 +243,8 @@ export default function Projects() {
 
         {/* View More */}
         <div
-          className={`mt-12 text-center transition-all duration-700 delay-500 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+          className={`mt-12 text-center transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
           <Button
             variant="outline"
