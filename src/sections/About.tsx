@@ -155,7 +155,7 @@ export default function About() {
               className={`grid grid-cols-2 gap-4 mb-8 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                 }`}
             >
-              {skills.map((skill, index) => (
+              {skills.map((skill, index) => ( 
                 <div
                   key={skill.title}
                   className="flex items-start gap-3 p-3 rounded-xl bg-foreground/5 dark:bg-white/5 hover:bg-foreground/10 dark:hover:bg-white/10 transition-colors"
@@ -183,7 +183,7 @@ export default function About() {
                 onClick={() => {
                   const link = document.createElement('a');
                   link.href = 'data:text/plain;charset=utf-8,Bolatito Heritage - Front-End Developer\n\nContact: bolatitoheritage25@gmail.com\nPhone: +2349132747510';
-                  link.download = 'B.Herry_CV.txt';
+                  link.download = 'Heritage_CV.pdf" download="Heritage_CV.pdf';
                   link.click();
                 }}
               >
